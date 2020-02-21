@@ -6,7 +6,7 @@ import { Tasks } from '../api/tasks.js';
 import AccountsUIWrapper from './AccountsUIWrapper.js';
 import TaskList from './TaskList.js';
 
-const App = (props, state) => {
+const App = () => {
   const useData = () => useTracker(() => {
     Meteor.subscribe('tasks');
 

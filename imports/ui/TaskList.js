@@ -1,6 +1,7 @@
 import React from 'react';
 import Task from './Task';
 
+// Made the rendering of the TaskList a rafce instead of a function call in App.js
 const TaskList = ({ tasks: filteredTasks, hideCompleted, currentUser }) => {
     if (hideCompleted) {
         filteredTasks = filteredTasks.filter(task => !task.checked);

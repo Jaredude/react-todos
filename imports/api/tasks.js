@@ -20,7 +20,7 @@ if (Meteor.isServer) {
 Meteor.methods({
     'tasks.insert'({taskDescription, isPrivate}) {
         check(taskDescription, String);
-        check(isPrivate, Boolean);
+        check(isPrivate, Boolean); // Added ability to set a todo as private on creation
 
         // Make sure the user is logged in before inserting a task
         if (!this.userId) {
